@@ -3,7 +3,7 @@ using System.Net;
 
 namespace ResponseFramework
 {
-    internal interface IResponse<TResult>
+    public interface IResponse<TResult>
     {
         bool IsSuccess { get; set; }
         string? Message { get; set; }
