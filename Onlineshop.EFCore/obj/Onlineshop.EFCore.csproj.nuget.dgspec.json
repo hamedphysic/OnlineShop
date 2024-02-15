@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\git\\project\\OnlineShop\\PublicTools\\PublicTools.csproj": {}
+    "F:\\git\\project\\OnlineShop\\Onlineshop.EFCore\\Onlineshop.EFCore.csproj": {}
   },
   "projects": {
-    "F:\\git\\project\\OnlineShop\\PublicTools\\PublicTools.csproj": {
+    "F:\\git\\project\\OnlineShop\\Onlineshop.EFCore\\Onlineshop.EFCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\git\\project\\OnlineShop\\PublicTools\\PublicTools.csproj",
-        "projectName": "PublicTools",
-        "projectPath": "F:\\git\\project\\OnlineShop\\PublicTools\\PublicTools.csproj",
+        "projectUniqueName": "F:\\git\\project\\OnlineShop\\Onlineshop.EFCore\\Onlineshop.EFCore.csproj",
+        "projectName": "Onlineshop.EFCore",
+        "projectPath": "F:\\git\\project\\OnlineShop\\Onlineshop.EFCore\\Onlineshop.EFCore.csproj",
         "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "F:\\git\\project\\OnlineShop\\PublicTools\\obj\\",
+        "outputPath": "F:\\git\\project\\OnlineShop\\Onlineshop.EFCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNet.Identity.EntityFramework": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

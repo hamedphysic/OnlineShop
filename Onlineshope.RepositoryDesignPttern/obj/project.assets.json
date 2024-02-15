@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\git\\project\\OnlineShop\\PublicTools\\PublicTools.csproj",
-      "projectName": "PublicTools",
-      "projectPath": "F:\\git\\project\\OnlineShop\\PublicTools\\PublicTools.csproj",
+      "projectUniqueName": "F:\\git\\project\\OnlineShop\\Onlineshope.RepositoryDesignPttern\\Onlineshope.RepositoryDesignPttern.csproj",
+      "projectName": "Onlineshope.RepositoryDesignPttern",
+      "projectPath": "F:\\git\\project\\OnlineShop\\Onlineshope.RepositoryDesignPttern\\Onlineshope.RepositoryDesignPttern.csproj",
       "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-      "outputPath": "F:\\git\\project\\OnlineShop\\PublicTools\\obj\\",
+      "outputPath": "F:\\git\\project\\OnlineShop\\Onlineshope.RepositoryDesignPttern\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\git\\project\\OnlineShop\\PublicTools\\PublicTools.csproj": {}
+    "F:\\git\\project\\OnlineShop\\OnlineshopDmain\\OnlineshopDmain.csproj": {}
   },
   "projects": {
-    "F:\\git\\project\\OnlineShop\\PublicTools\\PublicTools.csproj": {
+    "F:\\git\\project\\OnlineShop\\OnlineshopDmain\\OnlineshopDmain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\git\\project\\OnlineShop\\PublicTools\\PublicTools.csproj",
-        "projectName": "PublicTools",
-        "projectPath": "F:\\git\\project\\OnlineShop\\PublicTools\\PublicTools.csproj",
+        "projectUniqueName": "F:\\git\\project\\OnlineShop\\OnlineshopDmain\\OnlineshopDmain.csproj",
+        "projectName": "OnlineshopDmain",
+        "projectPath": "F:\\git\\project\\OnlineShop\\OnlineshopDmain\\OnlineshopDmain.csproj",
         "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "F:\\git\\project\\OnlineShop\\PublicTools\\obj\\",
+        "outputPath": "F:\\git\\project\\OnlineShop\\OnlineshopDmain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
