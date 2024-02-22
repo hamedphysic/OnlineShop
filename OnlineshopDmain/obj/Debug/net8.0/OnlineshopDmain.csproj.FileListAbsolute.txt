@@ -1,0 +1,13 @@
+F:\git\project\OnlineShop\OnlineshopDmain\bin\Debug\net8.0\OnlineshopDmain.deps.json
+F:\git\project\OnlineShop\OnlineshopDmain\bin\Debug\net8.0\OnlineshopDmain.dll
+F:\git\project\OnlineShop\OnlineshopDmain\bin\Debug\net8.0\OnlineshopDmain.pdb
+F:\git\project\OnlineShop\OnlineshopDmain\obj\Debug\net8.0\OnlineshopDmain.csproj.AssemblyReference.cache
+F:\git\project\OnlineShop\OnlineshopDmain\obj\Debug\net8.0\OnlineshopDmain.GeneratedMSBuildEditorConfig.editorconfig
+F:\git\project\OnlineShop\OnlineshopDmain\obj\Debug\net8.0\OnlineshopDmain.AssemblyInfoInputs.cache
+F:\git\project\OnlineShop\OnlineshopDmain\obj\Debug\net8.0\OnlineshopDmain.AssemblyInfo.cs
+F:\git\project\OnlineShop\OnlineshopDmain\obj\Debug\net8.0\OnlineshopDmain.csproj.CoreCompileInputs.cache
+F:\git\project\OnlineShop\OnlineshopDmain\obj\Debug\net8.0\OnlineshopDmain.sourcelink.json
+F:\git\project\OnlineShop\OnlineshopDmain\obj\Debug\net8.0\OnlineshopDmain.dll
+F:\git\project\OnlineShop\OnlineshopDmain\obj\Debug\net8.0\refint\OnlineshopDmain.dll
+F:\git\project\OnlineShop\OnlineshopDmain\obj\Debug\net8.0\OnlineshopDmain.pdb
+F:\git\project\OnlineShop\OnlineshopDmain\obj\Debug\net8.0\ref\OnlineshopDmain.dll

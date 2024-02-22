@@ -1,0 +1,12 @@
+F:\git\project\OnlineShop\PublicTools\bin\Debug\net8.0\PublicTools.deps.json
+F:\git\project\OnlineShop\PublicTools\bin\Debug\net8.0\PublicTools.dll
+F:\git\project\OnlineShop\PublicTools\bin\Debug\net8.0\PublicTools.pdb
+F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\PublicTools.GeneratedMSBuildEditorConfig.editorconfig
+F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\PublicTools.AssemblyInfoInputs.cache
+F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\PublicTools.AssemblyInfo.cs
+F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\PublicTools.csproj.CoreCompileInputs.cache
+F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\PublicTools.sourcelink.json
+F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\PublicTools.dll
+F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\refint\PublicTools.dll
+F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\PublicTools.pdb
+F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\ref\PublicTools.dll

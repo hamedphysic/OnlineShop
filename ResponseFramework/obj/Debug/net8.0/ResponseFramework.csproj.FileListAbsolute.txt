@@ -1,0 +1,12 @@
+F:\git\project\OnlineShop\ResponseFramework\bin\Debug\net8.0\ResponseFramework.deps.json
+F:\git\project\OnlineShop\ResponseFramework\bin\Debug\net8.0\ResponseFramework.dll
+F:\git\project\OnlineShop\ResponseFramework\bin\Debug\net8.0\ResponseFramework.pdb
+F:\git\project\OnlineShop\ResponseFramework\obj\Debug\net8.0\ResponseFramework.GeneratedMSBuildEditorConfig.editorconfig
+F:\git\project\OnlineShop\ResponseFramework\obj\Debug\net8.0\ResponseFramework.AssemblyInfoInputs.cache
+F:\git\project\OnlineShop\ResponseFramework\obj\Debug\net8.0\ResponseFramework.AssemblyInfo.cs
+F:\git\project\OnlineShop\ResponseFramework\obj\Debug\net8.0\ResponseFramework.csproj.CoreCompileInputs.cache
+F:\git\project\OnlineShop\ResponseFramework\obj\Debug\net8.0\ResponseFramework.sourcelink.json
+F:\git\project\OnlineShop\ResponseFramework\obj\Debug\net8.0\ResponseFramework.dll
+F:\git\project\OnlineShop\ResponseFramework\obj\Debug\net8.0\refint\ResponseFramework.dll
+F:\git\project\OnlineShop\ResponseFramework\obj\Debug\net8.0\ResponseFramework.pdb
+F:\git\project\OnlineShop\ResponseFramework\obj\Debug\net8.0\ref\ResponseFramework.dll
