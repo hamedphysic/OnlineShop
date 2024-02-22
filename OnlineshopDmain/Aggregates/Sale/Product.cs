@@ -9,10 +9,10 @@ namespace OnlineshopDmain.Aggregates.Sale
 {
     public class Product
     {
-        //public Guid Id { get; set; }
-        //public int ProductCategoryId { get; set; }
-        //public string Title { get; set; }
-        //public string Code { get; set; }
-        //public SqlMoney UnitPrice { get; set; }
+        public Guid Id { get; set; }
+        public int ProductCategoryId { get; set; }
+        public string Title { get; set; }
+        public string Code { get; set; }
+        public SqlMoney UnitPrice { get; set; }
     }
 }
