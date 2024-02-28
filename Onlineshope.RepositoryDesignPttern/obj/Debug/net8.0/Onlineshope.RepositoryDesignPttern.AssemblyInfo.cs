@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Onlineshope.RepositoryDesignPttern")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fa5da565f4261764bd412a61ff33c589fa7a56e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f23f6fa8881c3a0921c8ed0c579a7782807a7c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Onlineshope.RepositoryDesignPttern")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Onlineshope.RepositoryDesignPttern")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

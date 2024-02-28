@@ -29,7 +29,7 @@ namespace Onlineshop.EFCore
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("usermanagment");
+            modelBuilder.HasDefaultSchema("UserManagment");
 
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 

@@ -1,19 +1,17 @@
 ﻿using OnlineshopDmain.Frameworks.Abstracts;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace OnlineshopDmain.Aggregates.Sale
 {
-    public class Product: IDbSetEntity
+    public class OrderDetail: IDbSetEntity
     {
-        public Guid Id { get; set; }
-        public int ProductCategoryId { get; set; }
-        public string Title { get; set; }
-        public string Code { get; set; }
+        public Guid ProductId { get; set; }
+        public Guid OrderHeaderId { get; set; }
+        public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace Onlineshop.EFCore.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasDefaultSchema("usermanagment")
+                .HasDefaultSchema("UserManagment")
                 .HasAnnotation("ProductVersion", "8.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
@@ -45,7 +45,7 @@ namespace Onlineshop.EFCore.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetRoleClaims", "usermanagment");
+                    b.ToTable("AspNetRoleClaims", "UserManagment");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -70,7 +70,7 @@ namespace Onlineshop.EFCore.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserClaims", "usermanagment");
+                    b.ToTable("AspNetUserClaims", "UserManagment");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
@@ -92,7 +92,7 @@ namespace Onlineshop.EFCore.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserLogins", "usermanagment");
+                    b.ToTable("AspNetUserLogins", "UserManagment");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -111,7 +111,94 @@ namespace Onlineshop.EFCore.Migrations
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
-                    b.ToTable("AspNetUserTokens", "usermanagment");
+                    b.ToTable("AspNetUserTokens", "UserManagment");
+                });
+
+            modelBuilder.Entity("OnlineshopDmain.Aggregates.Sale.OrderDetail", b =>
+                {
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("OrderHeaderId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("ProductId", "OrderHeaderId");
+
+                    b.ToTable("OrderDetail", "Sale");
+                });
+
+            modelBuilder.Entity("OnlineshopDmain.Aggregates.Sale.OrderHeader", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("OrderDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OrderHeader", "Sale");
+                });
+
+            modelBuilder.Entity("OnlineshopDmain.Aggregates.Sale.Product", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("ProductCategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Product", "Sale");
+                });
+
+            modelBuilder.Entity("OnlineshopDmain.Aggregates.Sale.ProductCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ParentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductCategory", "Sale");
                 });
 
             modelBuilder.Entity("OnlineshopDmain.Aggregates.UserManagment.OnlineShopRoll", b =>
@@ -138,7 +225,7 @@ namespace Onlineshop.EFCore.Migrations
                         .HasDatabaseName("RoleNameIndex")
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.ToTable("AspNetRoles", "usermanagment");
+                    b.ToTable("AspNetRoles", "UserManagment");
                 });
 
             modelBuilder.Entity("OnlineshopDmain.Aggregates.UserManagment.OnlineShopUser", b =>
@@ -203,7 +290,7 @@ namespace Onlineshop.EFCore.Migrations
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
-                    b.ToTable("AspNetUsers", "usermanagment");
+                    b.ToTable("AspNetUsers", "UserManagment");
                 });
 
             modelBuilder.Entity("OnlineshopDmain.Aggregates.UserManagment.OnlineShopUserRoll", b =>
@@ -218,7 +305,7 @@ namespace Onlineshop.EFCore.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetUserRoles", "usermanagment");
+                    b.ToTable("AspNetUserRoles", "UserManagment");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
