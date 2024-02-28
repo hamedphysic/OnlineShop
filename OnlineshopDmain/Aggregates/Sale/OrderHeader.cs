@@ -12,6 +12,7 @@ namespace OnlineshopDmain.Aggregates.Sale
     {
         public Guid Id { get; set; }
         //public OnlineShopUser Seller { get; set; }
+        //
         //public OnlineShopUser Buyer { get; set; }
         public string Code { get; set; }
         public string OrderDate { get; set; }
