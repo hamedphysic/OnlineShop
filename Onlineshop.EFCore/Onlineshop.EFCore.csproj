@@ -21,6 +21,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OnlineshopDmain\OnlineshopDmain.csproj" />
+    <ProjectReference Include="..\PublicTools\PublicTools.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

@@ -16,3 +16,5 @@ F:\git\project\OnlineShop\Onlineshop.EFCore\obj\Debug\net8.0\Onlineshop.EFCore.p
 F:\git\project\OnlineShop\Onlineshop.EFCore\obj\Debug\net8.0\ref\Onlineshop.EFCore.dll
 F:\git\project\OnlineShop\Onlineshop.EFCore\bin\Debug\net8.0\Onlineshop.EFCore.runtimeconfig.json
 F:\git\project\OnlineShop\Onlineshop.EFCore\obj\Debug\net8.0\Onlineshop.EFCore.genruntimeconfig.cache
+F:\git\project\OnlineShop\Onlineshop.EFCore\bin\Debug\net8.0\PublicTools.dll
+F:\git\project\OnlineShop\Onlineshop.EFCore\bin\Debug\net8.0\PublicTools.pdb

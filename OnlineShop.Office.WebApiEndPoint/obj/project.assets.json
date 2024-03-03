@@ -1677,7 +1677,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2",
-          "OnlineshopDmain": "1.0.0"
+          "OnlineshopDmain": "1.0.0",
+          "PublicTools": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Onlineshop.EFCore.dll": {}
@@ -1697,6 +1698,16 @@
         },
         "runtime": {
           "bin/placeholder/OnlineshopDmain.dll": {}
+        }
+      },
+      "PublicTools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/PublicTools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PublicTools.dll": {}
         }
       }
     }
@@ -4701,6 +4712,11 @@
       "type": "project",
       "path": "../OnlineshopDmain/OnlineshopDmain.csproj",
       "msbuildProject": "../OnlineshopDmain/OnlineshopDmain.csproj"
+    },
+    "PublicTools/1.0.0": {
+      "type": "project",
+      "path": "../PublicTools/PublicTools.csproj",
+      "msbuildProject": "../PublicTools/PublicTools.csproj"
     }
   },
   "projectFileDependencyGroups": {

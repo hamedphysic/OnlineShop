@@ -974,7 +974,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2",
-          "OnlineshopDmain": "1.0.0"
+          "OnlineshopDmain": "1.0.0",
+          "PublicTools": "1.0.0"
         },
         "runtime": {
           "Onlineshop.EFCore.dll": {}
@@ -986,6 +987,11 @@
         },
         "runtime": {
           "OnlineshopDmain.dll": {}
+        }
+      },
+      "PublicTools/1.0.0": {
+        "runtime": {
+          "PublicTools.dll": {}
         }
       }
     }
@@ -1611,6 +1617,11 @@
       "sha512": ""
     },
     "OnlineshopDmain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PublicTools/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

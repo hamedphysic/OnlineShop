@@ -145,3 +145,5 @@ F:\git\project\OnlineShop\OnlineShop.Office.WebApiEndPoint\obj\Debug\net8.0\refi
 F:\git\project\OnlineShop\OnlineShop.Office.WebApiEndPoint\obj\Debug\net8.0\OnlineShop.Office.WebApiEndPoint.pdb
 F:\git\project\OnlineShop\OnlineShop.Office.WebApiEndPoint\obj\Debug\net8.0\OnlineShop.Office.WebApiEndPoint.genruntimeconfig.cache
 F:\git\project\OnlineShop\OnlineShop.Office.WebApiEndPoint\obj\Debug\net8.0\ref\OnlineShop.Office.WebApiEndPoint.dll
+F:\git\project\OnlineShop\OnlineShop.Office.WebApiEndPoint\bin\Debug\net8.0\PublicTools.dll
+F:\git\project\OnlineShop\OnlineShop.Office.WebApiEndPoint\bin\Debug\net8.0\PublicTools.pdb

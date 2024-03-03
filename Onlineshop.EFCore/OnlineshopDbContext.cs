@@ -7,6 +7,7 @@ using System.Reflection;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using OnlineshopDmain.Frameworks.Abstracts;
 using Onlineshop.EFCore.FrameWorks;
+using PublicTools.Constants;
 
 
 namespace Onlineshop.EFCore
@@ -29,11 +30,9 @@ namespace Onlineshop.EFCore
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("UserManagment");
+            modelBuilder.HasDefaultSchema(DatabaseConstants.Schemas.Identity);
 
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-
-
             modelBuilder.RegisterAllEntities<IDbSetEntity>(typeof(IDbSetEntity).Assembly);
 
             base.OnModelCreating(modelBuilder);

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using OnlineshopDmain.Aggregates.Sale;
+using PublicTools.Constants;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,10 @@ namespace Onlineshop.EFCore.Configuration.SaleConfiguration
     {
         public void Configure(EntityTypeBuilder<ProductCategory> builder)
         {
-            builder.ToTable("ProductCategory", "Sale");
+            builder.ToTable("ProductCategory", DatabaseConstants.Schemas.Model);
             builder.HasKey(pc => pc.Id);
             builder.Property(pc => pc.Title).IsRequired().HasMaxLength(50);
-            
+
         }
     }
 }

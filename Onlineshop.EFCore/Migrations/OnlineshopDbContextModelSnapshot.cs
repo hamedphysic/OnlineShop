@@ -17,7 +17,7 @@ namespace Onlineshop.EFCore.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasDefaultSchema("UserManagment")
+                .HasDefaultSchema("UserManagement")
                 .HasAnnotation("ProductVersion", "8.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
@@ -45,7 +45,7 @@ namespace Onlineshop.EFCore.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetRoleClaims", "UserManagment");
+                    b.ToTable("AspNetRoleClaims", "UserManagement");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -70,7 +70,7 @@ namespace Onlineshop.EFCore.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserClaims", "UserManagment");
+                    b.ToTable("AspNetUserClaims", "UserManagement");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
@@ -92,7 +92,7 @@ namespace Onlineshop.EFCore.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserLogins", "UserManagment");
+                    b.ToTable("AspNetUserLogins", "UserManagement");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -111,7 +111,7 @@ namespace Onlineshop.EFCore.Migrations
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
-                    b.ToTable("AspNetUserTokens", "UserManagment");
+                    b.ToTable("AspNetUserTokens", "UserManagement");
                 });
 
             modelBuilder.Entity("OnlineshopDmain.Aggregates.Sale.OrderDetail", b =>
@@ -130,6 +130,8 @@ namespace Onlineshop.EFCore.Migrations
 
                     b.HasKey("ProductId", "OrderHeaderId");
 
+                    b.HasIndex("OrderHeaderId");
+
                     b.ToTable("OrderDetail", "Sale");
                 });
 
@@ -139,12 +141,65 @@ namespace Onlineshop.EFCore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("BuyerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Code")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreatedLatin")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2024, 3, 4, 1, 20, 48, 291, DateTimeKind.Local).AddTicks(7466));
+
+                    b.Property<string>("DateCreatedPersian")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateModifiedLatin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DateModifiedPersian")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateSoftDeletedLatin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DateSoftDeletedPersian")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EntityDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<bool>("IsModified")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("OrderDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SellerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -164,6 +219,48 @@ namespace Onlineshop.EFCore.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<DateTime>("DateCreatedLatin")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2024, 3, 4, 1, 20, 48, 296, DateTimeKind.Local).AddTicks(4113));
+
+                    b.Property<string>("DateCreatedPersian")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateModifiedLatin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DateModifiedPersian")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateSoftDeletedLatin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DateSoftDeletedPersian")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EntityDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<bool>("IsModified")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
                     b.Property<int>("ProductCategoryId")
                         .HasColumnType("int");
 
@@ -176,6 +273,9 @@ namespace Onlineshop.EFCore.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProductCategoryId")
+                        .IsUnique();
 
                     b.ToTable("Product", "Sale");
                 });
@@ -225,7 +325,23 @@ namespace Onlineshop.EFCore.Migrations
                         .HasDatabaseName("RoleNameIndex")
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.ToTable("AspNetRoles", "UserManagment");
+                    b.ToTable("AspNetRoles", "UserManagement");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            ConcurrencyStamp = "1",
+                            Name = "GodAdmin",
+                            NormalizedName = "GODADMIN"
+                        },
+                        new
+                        {
+                            Id = "2",
+                            ConcurrencyStamp = "2",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        });
                 });
 
             modelBuilder.Entity("OnlineshopDmain.Aggregates.UserManagment.OnlineShopUser", b =>
@@ -236,8 +352,33 @@ namespace Onlineshop.EFCore.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("Cellphone")
+                        .IsRequired()
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreatedLatin")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2024, 3, 4, 1, 20, 48, 297, DateTimeKind.Local).AddTicks(6377));
+
+                    b.Property<string>("DateCreatedPersian")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateModifiedLatin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DateModifiedPersian")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateSoftDeletedLatin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DateSoftDeletedPersian")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -247,11 +388,44 @@ namespace Onlineshop.EFCore.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<bool>("IsModified")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NationalId")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<bool>("NationalIdConfirmed")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
@@ -282,6 +456,12 @@ namespace Onlineshop.EFCore.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Cellphone")
+                        .IsUnique();
+
+                    b.HasIndex("NationalId")
+                        .IsUnique();
+
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
 
@@ -290,7 +470,38 @@ namespace Onlineshop.EFCore.Migrations
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
-                    b.ToTable("AspNetUsers", "UserManagment");
+                    b.ToTable("AspNetUsers", "UserManagement", t =>
+                        {
+                            t.HasCheckConstraint("OnlyNationalId", "NationalId LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'");
+
+                            t.HasCheckConstraint("OnlyNumerical", "Cellphone LIKE '[0-0][9-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'");
+                        });
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            AccessFailedCount = 0,
+                            Cellphone = "09357622190",
+                            ConcurrencyStamp = "086eb98f-872a-4544-af33-245eed8531bc",
+                            DateCreatedLatin = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateModifiedLatin = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateSoftDeletedLatin = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EmailConfirmed = false,
+                            FirstName = "Hamed",
+                            IsActive = false,
+                            IsDeleted = false,
+                            IsModified = false,
+                            LastName = "Pazuki",
+                            LockoutEnabled = false,
+                            NationalId = "0123456789",
+                            NationalIdConfirmed = true,
+                            PasswordHash = "1",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "6fd8de6c-a529-447c-ab49-e3213a64e604",
+                            TwoFactorEnabled = false,
+                            UserName = "GodAdmin"
+                        });
                 });
 
             modelBuilder.Entity("OnlineshopDmain.Aggregates.UserManagment.OnlineShopUserRoll", b =>
@@ -305,7 +516,14 @@ namespace Onlineshop.EFCore.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetUserRoles", "UserManagment");
+                    b.ToTable("AspNetUserRoles", "UserManagement");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "1",
+                            RoleId = "1"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -344,6 +562,34 @@ namespace Onlineshop.EFCore.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("OnlineshopDmain.Aggregates.Sale.OrderDetail", b =>
+                {
+                    b.HasOne("OnlineshopDmain.Aggregates.Sale.OrderHeader", "orderHeader")
+                        .WithMany()
+                        .HasForeignKey("OrderHeaderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OnlineshopDmain.Aggregates.Sale.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("orderHeader");
+                });
+
+            modelBuilder.Entity("OnlineshopDmain.Aggregates.Sale.Product", b =>
+                {
+                    b.HasOne("OnlineshopDmain.Aggregates.Sale.ProductCategory", null)
+                        .WithOne("product")
+                        .HasForeignKey("OnlineshopDmain.Aggregates.Sale.Product", "ProductCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("OnlineshopDmain.Aggregates.UserManagment.OnlineShopUserRoll", b =>
                 {
                     b.HasOne("OnlineshopDmain.Aggregates.UserManagment.OnlineShopRoll", null)
@@ -356,6 +602,12 @@ namespace Onlineshop.EFCore.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("OnlineshopDmain.Aggregates.Sale.ProductCategory", b =>
+                {
+                    b.Navigation("product")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

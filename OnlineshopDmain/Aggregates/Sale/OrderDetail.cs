@@ -7,10 +7,15 @@ using System.Threading.Tasks;
 
 namespace OnlineshopDmain.Aggregates.Sale
 {
-    public class OrderDetail: IDbSetEntity
+    public class OrderDetail:IDbSetEntity
     {
+        //keys
         public Guid ProductId { get; set; }
         public Guid OrderHeaderId { get; set; }
+        //navigation
+        public Product Product { get; set; }    
+        public OrderHeader orderHeader { get; set; }
+        //properties
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
     }
