@@ -145,6 +145,14 @@ namespace Onlineshop.EFCore.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("BuyerRoleId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("BuyerUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Code")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -152,7 +160,7 @@ namespace Onlineshop.EFCore.Migrations
                     b.Property<DateTime>("DateCreatedLatin")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 3, 4, 1, 20, 48, 291, DateTimeKind.Local).AddTicks(7466));
+                        .HasDefaultValue(new DateTime(2024, 3, 20, 23, 5, 46, 294, DateTimeKind.Local).AddTicks(1463));
 
                     b.Property<string>("DateCreatedPersian")
                         .IsRequired()
@@ -199,11 +207,23 @@ namespace Onlineshop.EFCore.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("SellerRoleId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("SellerUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BuyerUserId", "BuyerRoleId");
+
+                    b.HasIndex("SellerUserId", "SellerRoleId");
 
                     b.ToTable("OrderHeader", "Sale");
                 });
@@ -222,7 +242,7 @@ namespace Onlineshop.EFCore.Migrations
                     b.Property<DateTime>("DateCreatedLatin")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 3, 4, 1, 20, 48, 296, DateTimeKind.Local).AddTicks(4113));
+                        .HasDefaultValue(new DateTime(2024, 3, 20, 23, 5, 46, 295, DateTimeKind.Local).AddTicks(1176));
 
                     b.Property<string>("DateCreatedPersian")
                         .IsRequired()
@@ -274,8 +294,7 @@ namespace Onlineshop.EFCore.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductCategoryId")
-                        .IsUnique();
+                    b.HasIndex("ProductCategoryId");
 
                     b.ToTable("Product", "Sale");
                 });
@@ -288,7 +307,7 @@ namespace Onlineshop.EFCore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ParentId")
+                    b.Property<int?>("ParentId")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
@@ -297,6 +316,8 @@ namespace Onlineshop.EFCore.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ParentId");
 
                     b.ToTable("ProductCategory", "Sale");
                 });
@@ -364,7 +385,7 @@ namespace Onlineshop.EFCore.Migrations
                     b.Property<DateTime>("DateCreatedLatin")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 3, 4, 1, 20, 48, 297, DateTimeKind.Local).AddTicks(6377));
+                        .HasDefaultValue(new DateTime(2024, 3, 20, 23, 5, 46, 296, DateTimeKind.Local).AddTicks(2864));
 
                     b.Property<string>("DateCreatedPersian")
                         .HasColumnType("nvarchar(max)");
@@ -483,7 +504,7 @@ namespace Onlineshop.EFCore.Migrations
                             Id = "1",
                             AccessFailedCount = 0,
                             Cellphone = "09357622190",
-                            ConcurrencyStamp = "086eb98f-872a-4544-af33-245eed8531bc",
+                            ConcurrencyStamp = "81969e31-cf1b-4687-a10f-0ed81f27a739",
                             DateCreatedLatin = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateModifiedLatin = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateSoftDeletedLatin = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -498,7 +519,7 @@ namespace Onlineshop.EFCore.Migrations
                             NationalIdConfirmed = true,
                             PasswordHash = "1",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6fd8de6c-a529-447c-ab49-e3213a64e604",
+                            SecurityStamp = "16e8eb8c-fcbf-4482-a686-7a8f9c0f7452",
                             TwoFactorEnabled = false,
                             UserName = "GodAdmin"
                         });
@@ -564,7 +585,7 @@ namespace Onlineshop.EFCore.Migrations
 
             modelBuilder.Entity("OnlineshopDmain.Aggregates.Sale.OrderDetail", b =>
                 {
-                    b.HasOne("OnlineshopDmain.Aggregates.Sale.OrderHeader", "orderHeader")
+                    b.HasOne("OnlineshopDmain.Aggregates.Sale.OrderHeader", "OrderHeader")
                         .WithMany()
                         .HasForeignKey("OrderHeaderId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -576,18 +597,48 @@ namespace Onlineshop.EFCore.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Product");
+                    b.Navigation("OrderHeader");
 
-                    b.Navigation("orderHeader");
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("OnlineshopDmain.Aggregates.Sale.OrderHeader", b =>
+                {
+                    b.HasOne("OnlineshopDmain.Aggregates.UserManagment.OnlineShopUserRoll", "Buyer")
+                        .WithMany()
+                        .HasForeignKey("BuyerUserId", "BuyerRoleId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("OnlineshopDmain.Aggregates.UserManagment.OnlineShopUserRoll", "Seller")
+                        .WithMany()
+                        .HasForeignKey("SellerUserId", "SellerRoleId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Buyer");
+
+                    b.Navigation("Seller");
                 });
 
             modelBuilder.Entity("OnlineshopDmain.Aggregates.Sale.Product", b =>
                 {
-                    b.HasOne("OnlineshopDmain.Aggregates.Sale.ProductCategory", null)
-                        .WithOne("product")
-                        .HasForeignKey("OnlineshopDmain.Aggregates.Sale.Product", "ProductCategoryId")
+                    b.HasOne("OnlineshopDmain.Aggregates.Sale.ProductCategory", "ProductCategory")
+                        .WithMany()
+                        .HasForeignKey("ProductCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("ProductCategory");
+                });
+
+            modelBuilder.Entity("OnlineshopDmain.Aggregates.Sale.ProductCategory", b =>
+                {
+                    b.HasOne("OnlineshopDmain.Aggregates.Sale.ProductCategory", "Parent")
+                        .WithMany()
+                        .HasForeignKey("ParentId");
+
+                    b.Navigation("Parent");
                 });
 
             modelBuilder.Entity("OnlineshopDmain.Aggregates.UserManagment.OnlineShopUserRoll", b =>
@@ -602,12 +653,6 @@ namespace Onlineshop.EFCore.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("OnlineshopDmain.Aggregates.Sale.ProductCategory", b =>
-                {
-                    b.Navigation("product")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

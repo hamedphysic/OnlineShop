@@ -12,10 +12,9 @@ namespace OnlineshopDmain.Aggregates.Sale
         //keys
         public int Id { get; set; }
         //navigation
-        public Product product { get; set; }
-        //public ProductCategory ProductCategoryParentId { get; set; }
+        public ProductCategory? Parent { get; set; }
         //properties
-        public int ParentId { get; set; }
+        public int? ParentId { get; set; }
         public string Title { get; set; }
     }
 }

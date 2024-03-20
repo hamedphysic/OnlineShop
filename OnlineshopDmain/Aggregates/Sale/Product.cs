@@ -13,6 +13,7 @@ namespace OnlineshopDmain.Aggregates.Sale
         //keys
         public Guid Id { get; set; }
         //navigation
+        public ProductCategory ProductCategory { get; set; }
         //properties
         public int ProductCategoryId { get; set; }
         public string Title { get; set; }

@@ -5,6 +5,7 @@ using PublicTools.Constants;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +18,9 @@ namespace Onlineshop.EFCore.Configuration.SaleConfiguration
             builder.ToTable("ProductCategory", DatabaseConstants.Schemas.Model);
             builder.HasKey(pc => pc.Id);
             builder.Property(pc => pc.Title).IsRequired().HasMaxLength(50);
+            //  modelBuilder.Entity().HasMany(p => p.Contacts).WithOne(d => d.Company).HasForeignKey(d => d.CompanyId);
+        //    builder.HasOne<ProductCategory>(p => p.Category).WithOne(p => p.Category).HasForeignKey(pc => pc.Id); 
+            
 
         }
     }

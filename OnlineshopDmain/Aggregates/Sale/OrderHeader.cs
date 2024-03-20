@@ -14,8 +14,8 @@ namespace OnlineshopDmain.Aggregates.Sale
         public Guid Id { get; set; }
         // navigation
 
-        //  public OnlineShopUser Seller { get; set; }
-        //  public OnlineShopUser Buyer { get; set; }
+          public OnlineShopUserRoll Seller { get; set; }
+          public OnlineShopUserRoll Buyer { get; set; }
 
         //properties
         public string SellerId { get; set; }
