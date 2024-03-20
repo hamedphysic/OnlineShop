@@ -11,6 +11,7 @@ using PublicTools.Constants;
 using OnlineshopDmain.Aggregates.Sale;
 
 
+
 namespace Onlineshop.EFCore
 {
     public class OnlineshopDbContext:IdentityDbContext<OnlineShopUser,OnlineShopRoll,string,

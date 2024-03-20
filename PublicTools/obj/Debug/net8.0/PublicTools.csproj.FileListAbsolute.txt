@@ -10,3 +10,5 @@ F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\PublicTools.dll
 F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\refint\PublicTools.dll
 F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\PublicTools.pdb
 F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\ref\PublicTools.dll
+F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\PublicTools.Resources.MessageResource.resources
+F:\git\project\OnlineShop\PublicTools\obj\Debug\net8.0\PublicTools.csproj.GenerateResource.cache
