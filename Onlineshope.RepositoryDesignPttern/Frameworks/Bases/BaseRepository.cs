@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using OnlineshopDmain.Aggregates.UserManagment;
 using Onlineshope.RepositoryDesignPttern.Frameworks.Abstracts;
-
+using PublicTools.Resources;
 using ResponseFramework;
 
 
@@ -31,10 +31,13 @@ namespace Onlineshope.RepositoryDesignPttern.Frameworks.Bases
         public virtual async Task<IResponse<object>> DeleteAsync(TPrimaryKey id)
         {
             var entityToDelete = DbSet.FindAsync(id).Result;
-          //  if (entityToDelete == null) return new ResponseFramework.Response<object>(MessageResource.Error_FailProcess);
+
+            if (entityToDelete == null) return new ResponseFramework.Response<object>(MessageResource.Error_FailProcess);
             DbSet.Remove(entityToDelete);
             await SaveChanges();
             return new ResponseFramework.Response<object>(entityToDelete);
+
+           
         }
 
         public Task<IResponse<object>> DeleteAsync(TEntity entity)

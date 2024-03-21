@@ -11,3 +11,10 @@ F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\obj\Debug\net8.0\re
 F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\obj\Debug\net8.0\Onlineshope.RepositoryDesignPttern.pdb
 F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\obj\Debug\net8.0\ref\Onlineshope.RepositoryDesignPttern.dll
 F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\obj\Debug\net8.0\Onlineshope.RepositoryDesignPttern.csproj.AssemblyReference.cache
+F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\bin\Debug\net8.0\OnlineshopDmain.dll
+F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\bin\Debug\net8.0\ResponseFramework.dll
+F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\bin\Debug\net8.0\OnlineshopDmain.pdb
+F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\bin\Debug\net8.0\ResponseFramework.pdb
+F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\obj\Debug\net8.0\Onlineshope.RepositoryDesignPttern.csproj.CopyComplete
+F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\bin\Debug\net8.0\PublicTools.dll
+F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\bin\Debug\net8.0\PublicTools.pdb

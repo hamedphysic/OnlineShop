@@ -330,6 +330,16 @@
           "bin/placeholder/OnlineshopDmain.dll": {}
         }
       },
+      "PublicTools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/PublicTools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PublicTools.dll": {}
+        }
+      },
       "ResponseFramework/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -832,6 +842,11 @@
       "path": "../OnlineshopDmain/OnlineshopDmain.csproj",
       "msbuildProject": "../OnlineshopDmain/OnlineshopDmain.csproj"
     },
+    "PublicTools/1.0.0": {
+      "type": "project",
+      "path": "../PublicTools/PublicTools.csproj",
+      "msbuildProject": "../PublicTools/PublicTools.csproj"
+    },
     "ResponseFramework/1.0.0": {
       "type": "project",
       "path": "../ResponseFramework/ResponseFramework.csproj",
@@ -843,6 +858,7 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.2",
       "Microsoft.EntityFrameworkCore >= 8.0.2",
       "OnlineshopDmain >= 1.0.0",
+      "PublicTools >= 1.0.0",
       "ResponseFramework >= 1.0.0"
     ]
   },
@@ -881,6 +897,9 @@
           "projectReferences": {
             "F:\\git\\project\\OnlineShop\\OnlineshopDmain\\OnlineshopDmain.csproj": {
               "projectPath": "F:\\git\\project\\OnlineShop\\OnlineshopDmain\\OnlineshopDmain.csproj"
+            },
+            "F:\\git\\project\\OnlineShop\\PublicTools\\PublicTools.csproj": {
+              "projectPath": "F:\\git\\project\\OnlineShop\\PublicTools\\PublicTools.csproj"
             },
             "F:\\git\\project\\OnlineShop\\ResponseFramework\\ResponseFramework.csproj": {
               "projectPath": "F:\\git\\project\\OnlineShop\\ResponseFramework\\ResponseFramework.csproj"
