@@ -36,38 +36,55 @@ namespace Onlineshope.RepositoryDesignPttern.Frameworks.Bases
             DbSet.Remove(entityToDelete);
             await SaveChanges();
             return new ResponseFramework.Response<object>(entityToDelete);
-
+            
            
         }
 
-        public Task<IResponse<object>> DeleteAsync(TEntity entity)
+        public virtual async Task<IResponse<object>> DeleteAsync(TEntity entityToDelete)
         {
-            throw new NotImplementedException();
+            if (DbContext.Entry(entityToDelete).State == EntityState.Detached)
+            {
+                DbSet.Attach(entityToDelete);
+            }
+            DbSet.Remove(entityToDelete);
+            await SaveChanges();
+            return new ResponseFramework.Response<object>(entityToDelete);
         }
 
-        public Task<IResponse<TEntity>> FindByIdAsync(TPrimaryKey? id)
+        public virtual async Task<IResponse<TEntity>> FindByIdAsync(TPrimaryKey? id)
         {
-            throw new NotImplementedException();
+            var q = await DbSet.FindAsync(id);
+            return q == null ? new ResponseFramework.Response<TEntity>(MessageResource.Error_FailProcess) : new ResponseFramework.Response<TEntity>(q);
         }
 
-        public Task<IResponse<object>> InsertAsync(TEntity entity)
+        public virtual async Task<IResponse<object>> InsertAsync(TEntity entity)
         {
-            throw new NotImplementedException();
+            await using (DbContext)
+            {
+                DbSet.Add(entity);
+                await SaveChanges();
+                return new ResponseFramework.Response<object>(entity);
+            }
         }
 
-        public Task SaveChanges()
+        public async Task SaveChanges()
         {
-            throw new NotImplementedException();
+            await DbContext.SaveChangesAsync();
         }
 
-        public Task<IResponse<List<TEntity>>> Select()
+        public virtual async Task<IResponse<List<TEntity>>> Select()
         {
-            throw new NotImplementedException();
+            var q = await DbSet.AsNoTracking().ToListAsync();
+            var response = new ResponseFramework.Response<List<TEntity>>(new List<TEntity>()) { Result = q };
+            return response;
         }
 
-        public Task<IResponse<object>> UpdateAsync(TEntity entity)
+        public virtual async Task<IResponse<object>> UpdateAsync(TEntity entity)
         {
-            throw new NotImplementedException();
+            DbSet.Attach(entity);
+            DbContext.Entry(entity).State = EntityState.Modified;
+            await SaveChanges();
+            return new ResponseFramework.Response<object>(entity);
         }
     }
 }

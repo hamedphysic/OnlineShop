@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace PublicTools.Constants
 {
+    
     public class DatabaseConstants
     {
+        
         public static class Schemas
         {
             public const string Identity = "UserManagement";

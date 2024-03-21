@@ -22,7 +22,7 @@ namespace PublicTools.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class MessageResource {
+    public class MessageResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace PublicTools.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PublicTools.Resources.MessageResource", typeof(MessageResource).Assembly);
@@ -51,7 +51,7 @@ namespace PublicTools.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace PublicTools.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Process was failed..
         /// </summary>
-        internal static string Error_FailProcess {
+        public static string Error_FailProcess {
             get {
                 return ResourceManager.GetString("Error_FailProcess", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace PublicTools.Resources {
         /// <summary>
         ///   Looks up a localized string similar to This record has been used in another entity.
         /// </summary>
-        internal static string Error_ImpossibleDelete {
+        public static string Error_ImpossibleDelete {
             get {
                 return ResourceManager.GetString("Error_ImpossibleDelete", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace PublicTools.Resources {
         /// <summary>
         ///   Looks up a localized string similar to نام کاربری یا رمز عبور معتبر نمیباشند.
         /// </summary>
-        internal static string Error_InvalidUserNameOrPassword {
+        public static string Error_InvalidUserNameOrPassword {
             get {
                 return ResourceManager.GetString("Error_InvalidUserNameOrPassword", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace PublicTools.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The Entity was used as a reference of another entities.
         /// </summary>
-        internal static string Error_ReferencedEntity {
+        public static string Error_ReferencedEntity {
             get {
                 return ResourceManager.GetString("Error_ReferencedEntity", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace PublicTools.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The Parameter is null.
         /// </summary>
-        internal static string Error_TheParameterIsNull {
+        public static string Error_TheParameterIsNull {
             get {
                 return ResourceManager.GetString("Error_TheParameterIsNull", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace PublicTools.Resources {
         /// <summary>
         ///   Looks up a localized string similar to ارائه این اطلاعات ضروری است..
         /// </summary>
-        internal static string Error_ThisFieldIsMandatory {
+        public static string Error_ThisFieldIsMandatory {
             get {
                 return ResourceManager.GetString("Error_ThisFieldIsMandatory", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace PublicTools.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Process was Successful..
         /// </summary>
-        internal static string Info_SuccessfullProcess {
+        public static string Info_SuccessfullProcess {
             get {
                 return ResourceManager.GetString("Info_SuccessfullProcess", resourceCulture);
             }

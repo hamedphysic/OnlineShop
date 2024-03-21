@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Onlineshop.EFCore\Onlineshop.EFCore.csproj" />
     <ProjectReference Include="..\OnlineshopDmain\OnlineshopDmain.csproj" />
     <ProjectReference Include="..\PublicTools\PublicTools.csproj" />
     <ProjectReference Include="..\ResponseFramework\ResponseFramework.csproj" />
