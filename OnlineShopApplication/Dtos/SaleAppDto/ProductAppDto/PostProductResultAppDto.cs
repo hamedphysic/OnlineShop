@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineshopDmain
+namespace OnlineShopApplication.Dtos.SaleAppDto.ProductAppDto
 {
-    public class GlobalUsing
+    public class PostProductResultAppDto
     {
     }
 }
