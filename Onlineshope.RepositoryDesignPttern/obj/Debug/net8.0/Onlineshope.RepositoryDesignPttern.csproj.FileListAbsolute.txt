@@ -18,3 +18,5 @@ F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\bin\Debug\net8.0\Re
 F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\obj\Debug\net8.0\Onlineshope.RepositoryDesignPttern.csproj.CopyComplete
 F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\bin\Debug\net8.0\PublicTools.dll
 F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\bin\Debug\net8.0\PublicTools.pdb
+F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\bin\Debug\net8.0\Onlineshop.EFCore.dll
+F:\git\project\OnlineShop\Onlineshope.RepositoryDesignPttern\bin\Debug\net8.0\Onlineshop.EFCore.pdb
